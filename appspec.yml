@@ -9,20 +9,7 @@ hooks:
     - location: script/install_dependencies.sh
       timeout: 300
       runas: root
-
-
-
-version: 0.0
-os: linux
-files:
-  - source: /index.html
-    destination: /var/www/html
-hooks:
-  AfterInstall:
-    - location: script/install_dependencies.sh
-      timeout: 300
-      runas: root
   ApplicationStart:
-    - location: script/start_nginx.sh
+    - location: script/start.sh
       timeout: 300
       runas: root
