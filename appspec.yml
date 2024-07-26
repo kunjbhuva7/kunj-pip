@@ -5,10 +5,10 @@ files:
     destination: /var/www/html
 hooks:
   AfterInstall:
-    - location: /opt/codedeploy-agent/deployment-root/6c999f03-12c5-4f37-adc5-41471a0db95e/d-3WP8LF9G7/deployment-archive/scripts/install.sh
+    - location: scripts/install.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: /opt/codedeploy-agent/deployment-root/6c999f03-12c5-4f37-adc5-41471a0db95e/d-3WP8LF9G7/deployment-archive/scripts/start.sh
+    - location: scripts/start.sh
       timeout: 300
       runas: root
