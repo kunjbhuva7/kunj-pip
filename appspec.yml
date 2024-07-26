@@ -5,14 +5,14 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: script/install_dependencies.sh
+    - location: script/install.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: script/stop_server.sh
+    - location: script/stop.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: script/install_nginx.sh
+    - location: script/start.sh
       timeout: 300
       runas: root
